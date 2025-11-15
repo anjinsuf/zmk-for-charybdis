@@ -50,14 +50,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-        /* 여기서부터 드라이버 옵션 */
-
-        // 0번 레이어에서는 안 쓸 거라 했고,
-        // 2번 레이어를 "마우스 레이어"로 쓸 거면
-        // automouse-layer = <2>;  // 나중에 자동 마우스 레이어 쓰고 싶으면 이거 켜면 됨
-
-        // 스크롤 전용 레이어 따로 만들면:
-        scroll-layers = <1>;    // 예: 1번 레이어를 스크롤 레이어로
+        snipe-layers = <0>;
+        scroll-layers = <1>;
     };
 };
 
