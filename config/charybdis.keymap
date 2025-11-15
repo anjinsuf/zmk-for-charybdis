@@ -15,31 +15,28 @@
         esc_grave: esc_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_GRAVE";
-            bindings = <&kp ESCAPE>, <&kp GRAVE>;
+            bindings = <&kp ESCAPE>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         alt4_to_altf4: alt4_to_altf4 {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT4_TO_ALTF4";
-            bindings = <&kp NUMBER_4>, <&kp F4>;
+            bindings = <&kp NUMBER_4>, <&kp LA(F4)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         altw_to_altdel: altw_to_altdel {
             compatible = "zmk,behavior-mod-morph";
             label = "ALTW_TO_ALTDEL";
-            bindings = <&kp W>, <&kp DELETE>;
+            bindings = <&kp W>, <&kp LA(DELETE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
     };
 
