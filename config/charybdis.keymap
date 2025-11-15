@@ -62,8 +62,8 @@
 &trans     &trans    &trans        &trans     &trans                &trans    &trans        &trans      &trans  &trans            &trans             &trans
                                    &trans     &kp LC(LS(NUMBER_1))  &trans    &trans        &trans
                                               &trans                &trans    &trans
-            trackball-bindings = <&tsm>;
             >;
+            trackball-bindings = <&tsm>;
         };
 
         layer_mouse {
@@ -74,8 +74,8 @@
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans    &trans      &trans  &trans
                                 &trans    &trans      &trans
-            trackball-bindings = <&tmv_medium>;
             >;
+            trackball-bindings = <&tmv_medium>;
         };
     };
 };
