@@ -38,6 +38,29 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        ControlQ_to_Altf4: ControlQ_to_Altf4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CONTROLQ_TO_ALTF4";
+            bindings = <&kp Q>, <&kp LA(F4)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Combo_SHFT_L {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <27 28>;
+        };
+
+        Combo_SHFT_R {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <31 32>;
+        };
     };
 
     keymap {
@@ -45,12 +68,12 @@
 
         layer_0 {
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2  &kp N3        &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
-&kp TAB           &kp Q   &kp W   &kp E         &kp R      &kp T           &kp Y          &kp U      &kp I      &kp O       &kp P     &kp BSLH
-&kp LEFT_CONTROL  &kp A   &kp S   &kp D         &kp F      &kp G           &kp H          &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z   &kp X   &kp C         &kp V      &kp B           &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp LEFT_SHIFT
-                                  &kp LEFT_ALT  &kp SPACE  &kp LEFT_GUI    &kp RIGHT_ALT  &kp ENTER
-                                                &mo 1      &mo 2           &kp DELETE
+&esc_grave        &kp N1              &kp N2           &kp N3        &kp NUMBER_4  &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
+&kp TAB           &ControlQ_to_Altf4  &altw_to_altdel  &kp E         &kp R         &kp T           &kp Y          &kp U      &kp I      &kp O       &kp P     &kp BSLH
+&kp LEFT_CONTROL  &kp A               &kp S            &kp D         &kp F         &kp G           &kp H          &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z               &kp X            &kp C         &kp V         &kp B           &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp LEFT_SHIFT
+                                                       &kp LEFT_ALT  &kp SPACE     &kp LEFT_GUI    &kp RIGHT_ALT  &kp ENTER
+                                                                     &mo 1         &mo 2           &kp DELETE
             >;
         };
 
